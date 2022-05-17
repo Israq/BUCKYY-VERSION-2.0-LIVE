@@ -294,9 +294,9 @@ function horizoltalSlider(stepNo) {
     var leftBtn = document.getElementsByClassName("btn-card-left")[0];
 
     const dict = {
-        "step 1": ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "{% static 'images/step_1.png'%}"],
-        "step 2": ["Choose your payment terms", "You’re in control. Pick the payment option that works for you from our transparent payment options —from 4 interest-free payments every 2 weeks to paying the whole amount at once.", "{% static 'images/step_2.png'%}"],
-        "step 3": ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "{% static 'images/step_3.png'%}"],
+        "step 1": ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "static/images/step_1.png"],
+        "step 2": ["Choose your payment terms", "You’re in control. Pick the payment option that works for you from our transparent payment options —from 4 interest-free payments every 2 weeks to paying the whole amount at once.", "static/images/step_2.png"],
+        "step 3": ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "static/images/step_3.png"],
     }
 
     if (stepNo == 'step 1') {
