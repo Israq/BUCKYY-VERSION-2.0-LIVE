@@ -1,0 +1,412 @@
+{% load static %}
+<html>
+<head>
+    <title>Bucky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Red+Hat+Display" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9210d8956f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'css/ekyc.css' %}">
+</head>
+
+<body>
+    <form id="ekyc-form" enctype="multipart/form-data" method="post" >
+    {% csrf_token %}
+    <div class="ekyc-section">
+        <button onClick="showEkycPage('previous'); removeClass()" id="previous-btn"><img
+                src="{% static 'images/left_arrow.png'%}"></button>
+        <div class="ekyc-container">
+            
+            
+            <h2 id="text">Let’s start by getting to know you better</h2>
+            <h1 id="lable">Name</h1>
+            <input id="ekyc-input" placeholder="Enter your Name">
+            <div class="img-div">
+                <div class="img-sub-div" id="img-0">
+                    <div class="img-container">
+                        <img src="" value="male" class="img" alt="">
+                    </div>
+                    <p class="img-text"></p>
+                </div>
+                <div class="img-sub-div" id="img-1">
+                    <div class="img-container">
+                        <img src="" value="" class="img" alt="">
+                    </div>
+                    <p class="img-text"></p>
+                </div>
+                <div class="img-sub-div" id="img-2">
+                    <div class="img-container">
+                        <img src="" value="" class="img" alt="">
+                    </div>
+                    <p class="img-text"></p>
+                </div>
+                <div class="img-sub-div" id="img-3">
+                    <div class="img-container">
+                        <img src="" value="" class="img" alt="">
+                    </div>
+                    <p class="img-text"></p>
+                </div>
+                <div class="img-sub-div" id="img-4">
+                    <div class="img-container">
+                        <img src="" value="" class="img" alt="">
+                    </div>
+                    <p class="img-text"></p>
+                </div>
+            </div>
+            <div id="income-div">
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-0"></p>
+                </div>
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-1"></p>
+                </div>
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-2"></p>
+                </div>
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-3"></p>
+                </div>
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-4"></p>
+                </div>
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-5"></p>
+                </div>
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-6"></p>
+                </div>
+                <div class="income-sub-div">
+                    <p class="income-text" id="txt-7"></p>
+                </div>
+            </div>
+            
+       
+  
+                
+
+                
+
+                <div class="verify-identity-section">
+                    <!-- End Upload Area -->
+                    <div id="uploadArea" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <p class="upload-area__title"></p>
+                            <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                        </div>
+                        <!-- End Header -->
+    
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                                <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph"></p>
+                            <span id="loadingText" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage" class="drop-zoon__preview-image"
+                                draggable="false">
+                            <input type="file" id="fileInput" class="drop-zoon__file-input" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+    
+                        <!-- File Details -->
+                        <div id="fileDetails" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+    
+                            <div id="uploadedFile" class="uploaded-file">
+                                <div class="uploaded-file__icon-container">
+                                    <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                </div>
+    
+                                <div id="uploadedFileInfo" class="uploaded-file__info">
+                                    <span class="uploaded-file__name">Proejct 1</span>
+                                    <span class="uploaded-file__counter">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                    </div>
+                    <!-- End Upload Area -->
+                    <!-- End Upload Area -->
+                    <div id="uploadArea1" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <p class="upload-area__title"></p>
+                            <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon1" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                                <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph"></p>
+                            <span id="loadingText1" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage1" class="drop-zoon__preview-image"
+                                draggable="false">
+                            <input type="file" id="fileInput1" class="drop-zoon__file-input1" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+    
+                        <!-- File Details -->
+                        <div id="fileDetails1" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+    
+                            <div id="uploadedFile1" class="uploaded-file">
+                                <div class="uploaded-file__icon-container">
+                                    <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                </div>
+    
+                                <div id="uploadedFileInfo1" class="uploaded-file__info">
+                                    <span class="uploaded-file__name1">Proejct 1</span>
+                                    <span class="uploaded-file__counter1">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                    </div>
+                    <!-- End Upload Area -->
+                    <div id="uploadArea2" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <p class="upload-area__title"></p>
+                            <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon2" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                                <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph"></p>
+                            <span id="loadingText2" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage2" class="drop-zoon__preview-image"
+                                draggable="false">
+                            <input type="file" id="fileInput2" class="drop-zoon__file-input2" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+    
+                        <!-- File Details -->
+                        <div id="fileDetails2" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+    
+                            <div id="uploadedFile2" class="uploaded-file">
+                                <div class="uploaded-file__icon-container">
+                                    <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                </div>
+    
+                                <div id="uploadedFileInfo2" class="uploaded-file__info">
+                                    <span class="uploaded-file__name2">Proejct 1</span>
+                                    <span class="uploaded-file__counter2">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                    </div>
+                </div>
+
+                
+                <div class="text-input-section">
+                    <div class="text-input-area">
+                        <label class="overview-label" for="name">Name</label>
+                        <div class="overview-input-container">
+                            <input class="overview-text-input" id="name-input" name="name" required>
+                        </div>
+                    </div>
+                    <div class="text-input-area">
+                        <label class="overview-label" for="email">Email</label>
+                        <div class="overview-input-container">
+                            <input class="overview-text-input" id="email-input" name="email" required>
+                        </div>
+                    </div>
+                    <div class="text-input-area">
+                        <label class="overview-label" for="address">Address</label>
+                        <div class="overview-input-container">
+                            <input class="overview-text-input" id="address-input" name="address" required>
+                        </div>
+                    </div>
+                    <div class="text-input-area">
+                        <label class="overview-label" for="gender">Gender</label>
+                        <div class="overview-input-container">
+                            <input class="overview-text-input" id="gender-input" name="gender" readonly required>
+                        </div>
+                    </div>
+                    <div class="text-input-area">
+                        <label class="overview-label" for="profession">Profession</label>
+                        <div class="overview-input-container">
+                            <input class="overview-text-input" id="profession-input" name="profession" readonly required>
+                        </div>
+                    </div>
+                    <div class="text-input-area">
+                        <label class="overview-label" for="source of fund">Source of Fund</label>
+                        <div class="overview-input-container">
+                            <input class="overview-text-input" id="source-of-fund-input" name="source of fund"
+                                readonly required>
+                        </div>
+                    </div>
+                    <div class="text-input-area">
+                        <label class="overview-label" for="income">Estimated<br> Monthly
+                            Income</label>
+                        <div class="overview-input-container">
+                            <input class="overview-text-input" id="estimated-monthly-income-input"
+                                name="income" readonly required>
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-documents-section">
+                    <div id="uploadArea3" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <p class="upload-area__title"></p>
+                            <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon3" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                                <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph"></p>
+                            <span id="loadingText3" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage3" class="drop-zoon__preview-image"
+                                draggable="false">
+                            <input type="file" id="fileInput3" class="drop-zoon__file-input3" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+    
+                        <!-- File Details -->
+                        <div id="fileDetails3" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+    
+                            <div id="uploadedFile3" class="uploaded-file">
+                                <div class="uploaded-file__icon-container">
+                                    <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                </div>
+    
+                                <div id="uploadedFileInfo3" class="uploaded-file__info">
+                                    <span class="uploaded-file__name3">Proejct 1</span>
+                                    <span class="uploaded-file__counter3">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                    </div>
+                    <div id="uploadArea4" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <p class="upload-area__title"></p>
+                            <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon4" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                                <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph"></p>
+                            <span id="loadingText4" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage4" class="drop-zoon__preview-image"
+                                draggable="false">
+                            <input type="file" id="fileInput4" class="drop-zoon__file-input4" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+    
+                        <!-- File Details -->
+                        <div id="fileDetails4" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+    
+                            <div id="uploadedFile4" class="uploaded-file">
+                                <div class="uploaded-file__icon-container">
+                                    <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                </div>
+    
+                                <div id="uploadedFileInfo4" class="uploaded-file__info">
+                                    <span class="uploaded-file__name4">Proejct 1</span>
+                                    <span class="uploaded-file__counter4">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                    </div>
+                    <div id="uploadArea5" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <p class="upload-area__title"></p>
+                            <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon5" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                                <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph"></p>
+                            <span id="loadingText5" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage5" class="drop-zoon__preview-image"
+                                draggable="false">
+                            <input type="file" id="fileInput5" class="drop-zoon__file-input5" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+    
+                        <!-- File Details -->
+                        <div id="fileDetails5" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+    
+                            <div id="uploadedFile5" class="uploaded-file">
+                                <div class="uploaded-file__icon-container">
+                                    <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                    <span class="uploaded-file__icon-text"></span> <!-- Data Will be Comes From Js -->
+                                </div>
+    
+                                <div id="uploadedFileInfo5" class="uploaded-file__info">
+                                    <span class="uploaded-file__name5">Proejct 1</span>
+                                    <span class="uploaded-file__counter5">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                    </div>
+                </div>
+            </form>
+            <div class="verifing-section">
+                <div class="verifing-section-container">
+                    <img src="{% static 'images/verified_icon.png'%}" alt="verified_icon">
+                    <h1>We’re Verifying Now</h1>
+                    <p>Please hold still. You’ll be notified after the process is completed</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button onclick="showEkycPage('next'); removeClass()" id="next-btn" for="ekyc-form">Next</button>
+        </div>
+    </div>
+    <div class="terms-and-conditions-popup">
+        <div class="terms-and-conditions-popup-container">
+            <h3>Terms and Conditions</h3>
+            <ol>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, at saepe sunt recusandae eius
+                    perferendis pariatur cum harum mollitia amet nihil hic nemo, voluptatum quo omnis consequatur
+                    consequuntur quae velit!</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, at saepe sunt recusandae eius
+                    perferendis pariatur cum harum mollitia amet nihil hic nemo, voluptatum quo omnis consequatur
+                    consequuntur quae velit!</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, at saepe sunt recusandae eius
+                    perferendis pariatur cum harum mollitia amet nihil hic nemo, voluptatum quo omnis consequatur
+                    consequuntur quae velit!</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, at saepe sunt recusandae eius
+                    perferendis pariatur cum harum mollitia amet nihil hic nemo, voluptatum quo omnis consequatur
+                    consequuntur quae velit!</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, at saepe sunt recusandae eius
+                    perferendis pariatur cum harum mollitia amet nihil hic nemo, voluptatum quo omnis consequatur
+                    consequuntur quae velit!</li>
+            </ol>
+            <button id="agree-btn" onClick="agreeTermsAndConditions()">I Agree</button>
+        </div>
+    </div>
+    <script src="{% static 'js/fileUpload.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>
