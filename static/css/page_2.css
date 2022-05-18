@@ -923,6 +923,10 @@ button:active {
     border-radius: 10px;
 }
 
+.btn-primary:hover {
+    background-color: #40444c;
+}
+
 @media (max-width: 991px) {
     .btn-primary {
         font-size: 18px;

@@ -383,9 +383,9 @@ function sliderUsingArrow(direction) {
     var leftBtn = document.getElementsByClassName("btn-card-left")[0];
 
     const dict = {
-        1: ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "images/step_1.png"],
-        2: ["Choose your payment terms", "You’re in control. Pick the payment option that works for you from our transparent payment options —from 4 interest-free payments every 2 weeks to paying the whole amount at once.", "images/step_2.png"],
-        3: ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "images/step_3.png"],
+        1: ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "static/images/step_1.png"],
+        2: ["Choose your payment terms", "You’re in control. Pick the payment option that works for you from our transparent payment options —from 4 interest-free payments every 2 weeks to paying the whole amount at once.", "static/images/step_2.png"],
+        3: ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "static/images/step_3.png"],
     }
 
     if (dictKey == undefined) {
@@ -579,9 +579,9 @@ function showEkycPage(move) {
         2: ["", "Email", "Enter your Email", "", "", "", "", ""],
         3: ["", "Address", "Enter your address", "", "", "", "", ""],
         4: ["", "Date of Birth", "00-00-1972", "", "", "", "", ""],
-        5: ["", "Gender", "", "images/Male.png", "images/Female.png", "images/Others.png", "", ""],
-        6: ["", "Profession", "", "images/Working Profession.png", "images/Business.png", "images/Student.png", "images/Self-Employed.png", "images/Retired.png"],
-        7: ["", "Source of Fund", "", "images/Salary from Service.png", "images/Earnings from Business.png", "images/Personal Savings.png", "images/Inheritance.png", "images/Return on Asset or Investment.png"],
+        5: ["", "Gender", "", "static/images/Male.png", "static/images/Female.png", "static/images/Others.png", "", ""],
+        6: ["", "Profession", "", "static/images/Working Profession.png", "static/images/Business.png", "static/images/Student.png", "static/images/Self-Employed.png", "static/images/Retired.png"],
+        7: ["", "Source of Fund", "", "static/images/Salary from Service.png", "static/images/Earnings from Business.png", "static/images/Personal Savings.png", "static/images/Inheritance.png", "static/images/Return on Asset or Investment.png"],
         8: ["", "Estimated Monthly Income", "Below BDT 1000", "BDT 1001 - 5000", "BDT 5001 -10000", "BDT 10,001 - 20,000", "BDT 20,001 - 50,000", "BDT 50,001 - 100,000", "BDT 100,001 - 200,000", "More than 200,000"],
         9: ["", "Verify Identity", "Your Selfie*", "Show user image", "NID Front Page*", "Upload your NID Front Page", "NID Back Page*", "Upload your NID Back Page"],
         10: ["", "Upload Documents", "Debit/Credit Card", "Upload your Debit/Credit Card", "Utility Bill", "Upload your Utility Bill", "Bank Statement", "Upload your Bank Statement", "", ""],
@@ -813,9 +813,9 @@ function showEkycPage(move) {
                 for (var i = 3; i < dict[key].length; i++) {
                     if (dict[key][i] != "") {
                         document.getElementsByClassName("img")[j].src = dict[key][i];
-                        imgSubDivArr[j].setAttribute('onclick', 'set("' + dict[key][i].slice(7, dict[key][i].length - 4) + '")' + ' ;cardLookModifier(this.id)');
-                        document.getElementsByClassName("img-text")[j].innerHTML = dict[key][i].slice(7, dict[key][i].length - 4);
-                        document.getElementsByClassName("img")[j].alt = dict[key][i].slice(7, dict[key][i].length - 4);
+                        imgSubDivArr[j].setAttribute('onclick', 'set("' + dict[key][i].slice(14, dict[key][i].length - 4) + '")' + ' ;cardLookModifier(this.id)');
+                        document.getElementsByClassName("img-text")[j].innerHTML = dict[key][i].slice(14, dict[key][i].length - 4);
+                        document.getElementsByClassName("img")[j].alt = dict[key][i].slice(14, dict[key][i].length - 4);
                         imgSubDivArr[j].style.display = "block";
                         if (dict[key][6] == "") {
                             thirdChildImgSubDiv.style.marginBottom = "150";
@@ -852,7 +852,7 @@ function set(imgValue) {
         sourceOfFund = "";
         monthlyIncome = "";
     }
-
+    console.log(sourceOfFund)
     var currentLabel = document.getElementById("lable").innerHTML;
 
     if (currentLabel == "Gender") {
