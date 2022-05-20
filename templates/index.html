@@ -390,11 +390,10 @@
             <img src="{% static 'images/account.png'%}">
             <h3>Create your account</h3>
             <p>Tell us a bit about yourself. We just need the basics.</p>
-            <form action="#" method="post">{% csrf_token %}
-            
-                
-                <input type="number" name="phone1" placeholder="Phone number" required>
-                <button type="submit" onClick="showOtpPopup()">Continue</button>
+            <form action="#" method="post">
+                {% csrf_token %}
+                <input type="number" name="phone" placeholder="Phone number" required>
+                <button type="submit">Continue</button>
             </form>
             <p>We’ll send you a verification code via SMS.</p>
             <p class="terms-of-service-para">By continuing, I agree to Buckyy’s <span id="terms-of-service">Terms of
