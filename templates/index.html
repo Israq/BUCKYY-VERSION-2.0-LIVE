@@ -364,6 +364,7 @@
             </div>
         </div>
     </footer>
+    <section id="sign-up-2"></section>
     <div class="sign-in-popup">
         <div class="pop-up">
             <img src="{% static 'images/account.png'%}">
@@ -383,13 +384,16 @@
     </div>
 
     <div class="create-account-popup">
+        
         <div class="pop-up">
             <button class="close-btn" onClick="closePopup()"><i class="far fa-times-circle"></i></button>
             <img src="{% static 'images/account.png'%}">
             <h3>Create your account</h3>
             <p>Tell us a bit about yourself. We just need the basics.</p>
-            <form action="#" method="">
-                <input type="number" placeholder="Phone number" required>
+            <form action="#" method="post">{% csrf_token %}
+            
+                
+                <input type="number" name="phone1" placeholder="Phone number" required>
                 <button type="submit" onClick="showOtpPopup()">Continue</button>
             </form>
             <p>We’ll send you a verification code via SMS.</p>
@@ -398,7 +402,7 @@
         </div>
     </div>
 
-    <div class="otp-popup">
+    <!--div class="otp-popup">
         <div class="pop-up">
             <button class="close-btn" onClick="closePopup()"><i class="far fa-times-circle"></i></button>
             <img src="{% static 'images/account.png'%}">
@@ -418,7 +422,8 @@
             <p>Didn’t receive the code?</p>
             <a>Resend OTP</a>
         </div>
-    </div>
+    </div-->
+    </section>
     <script src="{% static 'js/index.js'%}"></script>
 </body>
 

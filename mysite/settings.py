@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ekyc2',
     'contact',
     'geeks',
+    'phone',
     'books',
     
     

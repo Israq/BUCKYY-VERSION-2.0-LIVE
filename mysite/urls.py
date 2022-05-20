@@ -25,6 +25,7 @@ urlpatterns = [
     path('page_2.html',views.page_2, name='page_2'),
     path('financial_wellness.html',views.financial_wellness, name='financial_wellness'),
     path('', include('ekyc2.urls')),
+    path('', include('phone.urls')),
     path('', include('contact.urls')),
     path('', include('geeks.urls')),
     
