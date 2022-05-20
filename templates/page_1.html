@@ -22,12 +22,12 @@
 
 <body>
     <div id="navbar_hero_overlay_combined">
-        <div class="dual-navbar"><a href="#"><span class="active">For Shoppers</span></a><a href="#"><span>For
+        <div class="dual-navbar"><a href="index.html"><span class="active">For Shoppers</span></a><a href="index.html"><span>For
                     Business</span></a></div>
         <div class="navbar_hero_overlay_combined_container">
             <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: transparent;">
                 <div class="container-fluid" id="navbar-container">
-                    <a class="navbar-brand" href="#"><img src="{% static 'images/bucky_logo_white.png'%}" alt="buckyy-logo"></a>
+                    <a class="navbar-brand" href="{% url 'home:home' %}"><img src="{% static 'images/bucky_logo_white.png'%}" alt="buckyy-logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
@@ -231,14 +231,14 @@
                     <p class="step-header">Go shopping</p>
                     <p class="step-description">Shop your favorite stores online or in-store and pay later with Buckyy.
                         You’ll see us at checkout, or you can scan our QR code at in-store checkout.</p>
-
-                    <button type="button">Get Eligible</button>
+                    
+                    <button type="button" onclick="window.location.href = 'ekyc.html';">Get Eligible</button>
                     <button class="learn-more-btn" type="button">Learn More</button>
 
                     <div class="btn-card-left" onClick="sliderUsingArrow('left')"><i class="arrow-card left"></i></div>
                 </div>
                 <div class="col-md-6 col-sm-6"><img class="step-img" src="{% static 'images/step_1.png' %}">
-                    <button type="button">Get Eligible</button>
+                    <button type="button" onclick="window.location.href='ekyc.html';" >Get Eligible</button>
                     <button class="learn-more-btn" type="button">Learn More</button>
                     <div class="btn-card-right" onClick="sliderUsingArrow('right')"><i class="arrow-card right"></i>
                     </div>
@@ -255,7 +255,7 @@
         <div class="sign-up-section-left">
             <h1>Be with Buckyy</h1>
             <p>Let us help you simplify your finances.</p>
-            <button class="sign-up-btn">Sign Up</button>
+            <button class="sign-up-btn"><a href="index.html#sign-in-link">Sign Up</a></button>
         </div>
         <div class="sign-up-section-right">
             <img src="{% static 'images/bucky_logo_green.png'%}">

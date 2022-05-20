@@ -14,4 +14,6 @@ def ekyc(request):
     return render(request, 'ekyc.html')
 def financial_wellness(request):
     return render(request, 'financial_wellness.html')
+def phone(request):
+    return render(request, 'index.html')
 

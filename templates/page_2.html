@@ -22,12 +22,12 @@
 
 <body>
     <div id="navbar_hero_overlay_combined">
-        <div class="dual-navbar"><a href="#"><span class="active">For Shoppers</span></a><a href="#"><span>For
+        <div class="dual-navbar"><a href="index.html"><span class="active">For Shoppers</span></a><a href="index.html"><span>For
                     Business</span></a></div>
         <div class="navbar_hero_overlay_combined_container">
             <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: transparent;">
                 <div class="container-fluid" id="navbar-container">
-                    <a class="navbar-brand" href="#"><img src="{% static 'images/bucky_logo_white.png' %}" alt="buckyy-logo"></a>
+                    <a class="navbar-brand" href="{% url 'home:home' %}"><img src="{% static 'images/bucky_logo_white.png' %}" alt="buckyy-logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
@@ -256,7 +256,7 @@
                     <p class="check-credit-score-para">Check your Credit Score To Get Eligible for Buy Now, Pay Later
                     </p>
                     <div class="check-credit-score-button-section">
-                        <button type="button" class="btn btn-primary">Get Eligible</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='ekyc.html';">Get Eligible</button>
                         <button type="button" class="btn btn-primary">Sign up</button>
                     </div>
                 </div>
