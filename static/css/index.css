@@ -593,6 +593,23 @@ label {
     overflow-x: hidden;
 }
 
+@media (max-width: 400px) {
+    .slider {
+        overflow-x: scroll; 
+    }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.slider {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 @media (max-width: 920px) {
     .slider {
         padding: 40px 0px 40px 0px;
@@ -672,6 +689,10 @@ label {
     transition: all .5s ease-in-out;
 }
 
+#last-card {
+    margin-right: 40px;
+}
+
 @media (min-width: 769px) {
     .slider>.slider-card {
         left: 350px;
@@ -721,8 +742,14 @@ label {
     box-shadow: 0px 3px rgb(0, 0, 0, 0.1);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 400px) {
+    .btn-card-left,
+    .btn-card-right {
+        display: none !important;
+    }
+}
 
+@media (max-width: 920px) {
     .btn-card-left,
     .btn-card-right {
         top: 35%;
@@ -730,7 +757,6 @@ label {
 }
 
 @media (min-width: 921px) {
-
     .btn-card-left,
     .btn-card-right {
         top: 45%;
@@ -738,7 +764,6 @@ label {
 }
 
 .btn-card-right {
-    position: absolute;
     right: 0;
     margin-right: 15px;
     margin-left: 0px;
@@ -1646,7 +1671,7 @@ form {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 .close-btn {
