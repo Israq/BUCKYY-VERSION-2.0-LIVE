@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
@@ -24,9 +26,14 @@ urlpatterns = [
     path('page_1.html',views.page_1, name='page_1'),
     path('page_2.html',views.page_2, name='page_2'),
     path('financial_wellness.html',views.financial_wellness, name='financial_wellness'),
+    path('verify.html',views.verify, name='verify'),
     path('', include('ekyc2.urls')),
     path('', include('phone.urls')),
     path('', include('contact.urls')),
     path('', include('geeks.urls')),
     
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

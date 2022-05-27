@@ -255,12 +255,16 @@ input {
   }
 }
 
-#next-btn,
+.next-btn,
 #previous-btn {
   position: absolute;
   border: 0;
   cursor: pointer;
   outline: none;
+}
+
+#previous-btn {
+  display: none;
 }
 
 #agree-btn {
@@ -271,7 +275,7 @@ input {
   outline: none;
 }
 
-#next-btn,
+.next-btn,
 #agree-btn {
   bottom: 50;
   right: 100;
@@ -281,6 +285,7 @@ input {
   background-color: #28CCAC;
   border-radius: 8px;
   padding: 10px 65px 10px 65px;
+  outline: none !important;
 }
 
 #agree-btn {
@@ -289,30 +294,35 @@ input {
 }
 
 @media (max-width: 759px) {
-  #next-btn {
+  .next-btn {
     bottom: 30;
   }
 }
 
 @media (max-width: 920px) {
-  #next-btn {
+  .next-btn {
     right: 30;
   }
 }
 
 @media (max-width: 361px) {
-  #next-btn {
+  .next-btn {
     right: 10;
   }
 }
 
 @media (max-width: 690px) {
 
-  #next-btn,
+  .next-btn,
   #agree-btn {
     font-size: 20px;
     padding: 8px 40px 8px 40px;
   }
+}
+
+#confirm-btn {
+  display: none;
+  right: 20 !important;
 }
 
 #previous-btn {
@@ -1179,6 +1189,19 @@ input {
 }
 
 /*end*/
+
+/* Date Input */
+
+input[type="date"] { 
+  background: #fff;
+  color: #f1f2f2 !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url('../images/calendar.png');
+}
+
+/* end */
 
 /*Overview Section*/
 

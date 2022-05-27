@@ -538,7 +538,8 @@ var bankStatement = "";
 
 function showEkycPage(move) {
     var j = 0;
-    var nextBtn = document.getElementById("next-btn");
+    var confirmBtn = document.getElementById("confirm-btn");
+    var nextBtn = document.getElementsByClassName("next-btn")[1];
     var thirdChildImgSubDiv = document.querySelector(".img-sub-div:nth-child(3)");
     var fifthChildImgSubDiv = document.querySelector(".img-sub-div:nth-child(5)");
     var imgSubDivArr = document.getElementsByClassName("img-sub-div");
@@ -643,6 +644,13 @@ function showEkycPage(move) {
         key -= 1;
     }
 
+    if(key == 1) {
+        previousBtn.style.display = "none";
+    }
+    else {
+        previousBtn.style.display = "block";
+    }
+
     verifyIdentitySection[0].style.display = "none";
     uploadDocumentsSection[0].style.display = "none";
     document.getElementById("income-div").style.display = "none";
@@ -721,6 +729,9 @@ function showEkycPage(move) {
             uploadedFileCounter3[0].style.color = "#C4C4C4";
             uploadedFileCounter4[0].style.color = "#C4C4C4";
             uploadedFileCounter5[0].style.color = "#C4C4C4";
+
+            nextBtn.style.display = "block";
+            confirmBtn.style.display = "none";
         }
         else if (key == 11) {
             verifyIdentitySection[0].style.display = "flex";
@@ -764,8 +775,8 @@ function showEkycPage(move) {
                 fileDetailsTitle[i].style.color = "#fff";
             }
 
-            nextBtn.innerHTML = "Confirm";
-            nextBtn.setAttribute("type", "submit");
+            nextBtn.style.display = "none";
+            confirmBtn.style.display = "block";
             nameInput.value = name;
             nameInput.style.width = name.length + "ch";
             emailInput.value = email;
