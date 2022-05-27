@@ -748,7 +748,7 @@ function showEkycPage(move) {
             uploadedFileCounter5[0].style.color = "#fff";
 
             for (var i = 0; i < uploadArea.length; i++) {
-                uploadArea[i].style.backgroundImage = "url('../images/selfie_bg.jpeg')";
+                uploadArea[i].style.backgroundImage = "url('../static/images/selfie_bg.jpeg')";
                 uploadArea[i].style.backgroundSize = "cover";
                 uploadArea[i].style.backgroundRepeat = "no-repeat";
                 if (i == 2) {
