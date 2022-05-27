@@ -28,7 +28,12 @@ class Ekyc2(models.Model):
      email= models.CharField(max_length=100)
      name= models.CharField(max_length=100,default=True)
      profession= models.CharField(max_length=100,default=True)
-     selfie= models.ImageField(upload_to ='images',default=True)
+     selfie= models.FileField(default=True)
+     nid_front = models.FileField(default=True)
+     nid_back = models.FileField(default=True)
+     debit_card = models.FileField(default=True)
+     utility_bill = models.FileField(default=True)
+     bank_statement = models.FileField(default=True)
      income= models.CharField( max_length=100,default=True,
         choices=INCOME_CHOICE)
 
