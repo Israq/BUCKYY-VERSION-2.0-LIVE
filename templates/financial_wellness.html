@@ -16,6 +16,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+    <script src="{% static 'js/index.js'%}"></script>
     <link rel="stylesheet" href="{% static 'css/financial_wellness.css'%}">
 </head>
 
@@ -212,6 +213,42 @@
         </div>
         <div class="sign-up-section-right">
             <img src="{% static 'images/bucky_logo_green.png'%}">
+        </div>
+    </div>
+
+    <div class="sign-in-popup">
+        <div class="pop-up">
+            <img src="{% static 'images/account.png' %}">
+            <button class="close-btn" onClick="closePopup()"><i class="far fa-times-circle"></i></button>
+            <h3>Sign in</h3>
+            <p>Sign in to your account with your phone number</p>
+            <form action="#" method="">
+                <input type="number" id="phone-number-input" placeholder="Phone number" required>
+                <input type="password" placeholder="Password" required>
+                <p id="forgotten-password-para">Forgotten password?</p>
+                <button type="submit">Continue</button>
+            </form>
+            <a onClick="openCreateAccountPopup()">Don't have an account? Create one.</a>
+            <p class="terms-of-service-para">By continuing, I agree to Buckyy’s <span id="terms-of-service">Terms of
+                    Service</span> and authorize Buckyy to obtain, use, and share consumer reports about me.</p>
+        </div>
+    </div>
+
+    <div class="create-account-popup">
+
+        <div class="pop-up">
+            <button class="close-btn" onClick="closePopup()"><i class="far fa-times-circle"></i></button>
+            <img src="{% static 'images/account.png'%}">
+            <h3>Create your account</h3>
+            <p>Tell us a bit about yourself. We just need the basics.</p>
+            <form action="#" method="post">
+                {% csrf_token %}
+                <input type="number" name="phone" placeholder="Phone number" required>
+                <button type="submit">Continue</button>
+            </form>
+            <p>We’ll send you a verification code via SMS.</p>
+            <p class="terms-of-service-para">By continuing, I agree to Buckyy’s <span id="terms-of-service">Terms of
+                    Service</span> and authorize Buckyy to obtain, use, and share consumer reports about me.</p>
         </div>
     </div>
 
