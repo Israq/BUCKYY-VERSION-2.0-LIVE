@@ -54,31 +54,31 @@ function slide(step) {
             stepBtn2.removeAttribute("style");
             stepBtn3.removeAttribute("style");
             buyingCard[0].style.marginTop = "400";
-            stepBtn2.style.fontSize = "18";
-            stepBtn2.style.fontWeight = "100";
-            stepBtn2.style.marginLeft = "0";
             stepBtn1.style.fontSize = "25";
             stepBtn1.style.fontWeight = "900";
             stepBtn1.style.marginLeft = "10";
         }
         else if (step == 'step-2') {
-            buyingCard[0].style.marginTop = "13";
-            buyingCard[2].style.display = "block";
             stepBtn1.removeAttribute("style");
             stepBtn3.removeAttribute("style");
+            buyingCard[2].style.display = "block";
+            buyingCard[0].style.marginTop = "15";
+            stepBtn1.style.fontSize = "18";
+            stepBtn1.style.fontWeight = "100";
+            stepBtn1.style.marginLeft = "0";
             stepBtn2.style.fontSize = "25";
             stepBtn2.style.fontWeight = "900";
             stepBtn2.style.marginLeft = "10";
         }
         else {
-            buyingCard[0].style.marginTop = "-365";
+            buyingCard[0].style.marginTop = "-400";
             buyingCard[2].style.display = "block";
             buyingCard[2].style.marginTop = "0";
             stepBtn1.removeAttribute("style");
             stepBtn2.removeAttribute("style");
-            stepBtn2.style.fontSize = "18";
-            stepBtn2.style.fontWeight = "100";
-            stepBtn2.style.marginLeft = "0";
+            stepBtn1.style.fontSize = "18";
+            stepBtn1.style.fontWeight = "100";
+            stepBtn1.style.marginLeft = "0";
             stepBtn3.style.fontSize = "25";
             stepBtn3.style.fontWeight = "900";
             stepBtn3.style.marginLeft = "10";
