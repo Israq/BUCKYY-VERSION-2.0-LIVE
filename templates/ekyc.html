@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon"  href="{% static '/images/bucky_favicon.png'%}">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Red+Hat+Display" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/9210d8956f.js" crossorigin="anonymous"></script>
@@ -611,6 +610,12 @@
             </ol>
             <button id="agree-btn" onClick="agreeTermsAndConditions()">I Agree</button>
         </div>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Hey there!</strong>&nbsp; Please fill up the input field below.
+        <button type="button" class="close" id="close-alert" data-dismiss="alert" aria-label="Close" onClick="closePopup()">
+          <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <script src="{% static 'js/fileUpload.js' %}"></script>
     <script src="{% static 'js/index.js' %}"></script>

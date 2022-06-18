@@ -1249,10 +1249,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                       supported by Chrome, Opera and Firefox */
 }
 
-.terms-and-conditions-popup-container {
-  
-}
-
 .terms-and-conditions-popup-container>h3 {
   font-weight: bold;
   text-align: center;
@@ -1393,6 +1389,27 @@ li:last-child {
   .verifing-section-container>p {
     font-size: 23px;
   }
+}
+
+/*end*/
+
+/*Alert*/
+
+.alert {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 10;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0 !important;
+  animation: all 0.5s ease-in-out;
+}
+
+.close {
+  outline: none !important;
 }
 
 /*end*/

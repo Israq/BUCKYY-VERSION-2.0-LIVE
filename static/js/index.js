@@ -495,6 +495,7 @@ function arrowRotation(btnNo) {
 //Close log in 
 
 function closePopup() {
+    document.getElementsByClassName("alert")[0].style.opacity = "0";
     document.getElementsByClassName("sign-in-popup")[0].style.display = "none";
     document.getElementsByClassName("create-account-popup")[0].style.display = "none";
     document.getElementsByClassName("otp-popup")[0].style.display = "none";
@@ -574,6 +575,7 @@ function showEkycPage(move) {
     var btnContainer = document.getElementsByClassName("btn-container");
     var previousBtn = document.getElementById("previous-btn");
     var headings = document.getElementsByTagName("h1");
+    var alert = document.getElementsByClassName("alert");
 
     const dict = {
         1: ["Let’s start by getting to know you better", "Name", "Enter your Name", "", "", "", "", ""],
@@ -609,28 +611,82 @@ function showEkycPage(move) {
     if (currentLabel == "Name") {
         name = document.getElementById("ekyc-input").value;
         document.getElementById("ekyc-input").value = "";
+
+        if(move == 'next' && name == "") {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
     }
     else if (currentLabel == "Email") {
         email = document.getElementById("ekyc-input").value;
         document.getElementById("ekyc-input").value = "";
+
+        if(move == 'next' && email == "") {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
     }
     else if (currentLabel == "Address") {
         address = document.getElementById("ekyc-input").value;
         document.getElementById("ekyc-input").value = "";
+
+        if(move == 'next' && address == "") {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
     }
     else if (currentLabel == "Date of Birth") {
         dateOfBirth = document.getElementById("ekyc-input").value;
         document.getElementById("ekyc-input").value = "";
+
+        if(move == 'next' && dateOfBirth == "") {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
+    }
+    else if (currentLabel == "Gender") {
+        if(move == "next" && gender == undefined) {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
+    }
+    else if (currentLabel == "Profession") {
+        if(move == "next" && profession == "") {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
+    }
+    else if (currentLabel == "Source of Fund") {
+        if(move == "next" && sourceOfFund == "") {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
+    }
+    else if (currentLabel == "Estimated Monthly Income") {
+        if(move == "next" && monthlyIncome == "") {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
     }
     if (currentLabel == "Verify Identity") {
         nidFrontPage = document.getElementById("fileInput").value;
         nidBackPage = document.getElementById("fileInput1").value;
         selfie = document.getElementById("fileInput2").value;
+
+        if(move == 'next' && (nidFrontPage == "" || nidBackPage == "" || selfie == "")) {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
     }
     else if (currentLabel == "Upload Documents") {
         debitCreditCard = document.getElementById("fileInput3").value;
         utilityBill = document.getElementById("fileInput4").value;
         bankStatement = document.getElementById("fileInput5").value;
+
+        if(move == 'next' && (debitCreditCard == "" || utilityBill == "" || bankStatement == "")) {
+            alert[0].style.setProperty('opacity', '1', 'important');
+            return;
+        }
     }
 
     if (key == undefined) {
@@ -848,6 +904,7 @@ function showEkycPage(move) {
         }
     }
     previousIncomeKey = key;
+    alert[0].style.setProperty('opacity', '0', 'important');
 }
 
 
@@ -857,13 +914,14 @@ var sourceOfFund = "";
 var monthlyIncome = "";
 
 function set(imgValue) {
+    var alert = document.getElementsByClassName("alert");
+
     if (gender == undefined) {
         gender = "";
         profession = "";
         sourceOfFund = "";
         monthlyIncome = "";
     }
-    console.log(sourceOfFund)
     var currentLabel = document.getElementById("lable").innerHTML;
 
     if (currentLabel == "Gender") {
