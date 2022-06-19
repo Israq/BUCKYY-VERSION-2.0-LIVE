@@ -590,12 +590,12 @@ label {
     height: 355px;
     margin-left: auto;
     z-index: 100;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 
-@media (max-width: 400px) {
-    .slider {
-        overflow-x: scroll; 
+@media (pointer:coarse) {
+    .btn-card-left, .btn-card-right {
+        display: none;
     }
 }
 
