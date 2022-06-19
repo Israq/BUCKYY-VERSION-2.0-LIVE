@@ -590,7 +590,13 @@ label {
     height: 355px;
     margin-left: auto;
     z-index: 100;
-    overflow-x: hidden;
+    overflow-x: scroll;
+}
+
+@media (pointer:coarse) {
+    .btn-card-left, .btn-card-right {
+        display: none;
+    }
 }
 
 @media (max-width: 400px) {
