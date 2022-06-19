@@ -841,16 +841,6 @@ label {
     margin-right: 0;
 }
 
-/* .process-section-right>.process-section-cards>.process-section-card:nth-child(2) {
-    position: relative;
-    top: 93;
-}
-
-.process-section-right>.process-section-cards>.process-section-card:nth-child(3) {
-    position: relative;
-    top: 173;
-} */
-
 @media (max-width: 718px) {
     .process-section-overlay {
         height: 1225px;
