@@ -599,12 +599,6 @@ label {
     }
 }
 
-@media (max-width: 400px) {
-    .slider {
-        overflow-x: scroll; 
-    }
-}
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .slider::-webkit-scrollbar {
     display: none;
