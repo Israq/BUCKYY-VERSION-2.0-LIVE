@@ -95,11 +95,10 @@ function cardViewer(step) {
 
     if (browserWidth <= 718) {
         if (step == 'step-1') {
-            stepBtn2.removeAttribute("style");
-            stepBtn3.removeAttribute("style");
             cards[0].style.zIndex = "2";
             cards[2].style.zIndex = "0";
             cards[1].style.zIndex = "1";
+            stepBtn3.removeAttribute("style");
             stepBtn2.style.fontSize = "18";
             stepBtn2.style.fontWeight = "100";
             stepBtn2.style.marginLeft = "0";
@@ -111,8 +110,10 @@ function cardViewer(step) {
             cards[1].style.zIndex = "2";
             cards[0].style.zIndex = "1";
             cards[2].style.zIndex = "1";
-            stepBtn1.removeAttribute("style");
             stepBtn3.removeAttribute("style");
+            stepBtn1.style.fontSize = "18";
+            stepBtn1.style.fontWeight = "100";
+            stepBtn1.style.marginLeft = "0";
             stepBtn2.style.fontSize = "25";
             stepBtn2.style.fontWeight = "900";
             stepBtn2.style.marginLeft = "10";
@@ -121,11 +122,10 @@ function cardViewer(step) {
             cards[2].style.zIndex = "2";
             cards[0].style.zIndex = "0";
             cards[1].style.zIndex = "1";
-            stepBtn1.removeAttribute("style");
             stepBtn2.removeAttribute("style");
-            stepBtn2.style.fontSize = "18";
-            stepBtn2.style.fontWeight = "100";
-            stepBtn2.style.marginLeft = "0";
+            stepBtn1.style.fontSize = "18";
+            stepBtn1.style.fontWeight = "100";
+            stepBtn1.style.marginLeft = "0";
             stepBtn3.style.fontSize = "25";
             stepBtn3.style.fontWeight = "900";
             stepBtn3.style.marginLeft = "10";
@@ -496,6 +496,7 @@ function arrowRotation(btnNo) {
 
 function closePopup() {
     document.getElementsByClassName("alert")[0].style.opacity = "0";
+    document.getElementsByClassName("alert")[1].style.opacity = "0";
     document.getElementsByClassName("sign-in-popup")[0].style.display = "none";
     document.getElementsByClassName("create-account-popup")[0].style.display = "none";
     document.getElementsByClassName("otp-popup")[0].style.display = "none";
@@ -618,12 +619,21 @@ function showEkycPage(move) {
         }
     }
     else if (currentLabel == "Email") {
+        var re = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$");
         email = document.getElementById("ekyc-input").value;
         document.getElementById("ekyc-input").value = "";
 
         if(move == 'next' && email == "") {
             alert[0].style.setProperty('opacity', '1', 'important');
             return;
+        }
+        else {
+            if(re.test(email)) {
+            }
+            else {
+                alert[1].style.setProperty('opacity', '1', 'important');
+                return;
+            }
         }
     }
     else if (currentLabel == "Address") {
@@ -905,6 +915,7 @@ function showEkycPage(move) {
     }
     previousIncomeKey = key;
     alert[0].style.setProperty('opacity', '0', 'important');
+    alert[1].style.setProperty('opacity', '0', 'important');
 }
 
 
