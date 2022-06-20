@@ -585,14 +585,25 @@ label {
 }
 
 .slider {
-    position: relative;
     display: flex;
+    position: relative;
     height: 355px;
-    margin-left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -113px;
     z-index: 100;
     overflow-x: scroll;
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 920px) {
+    .slider {
+        height: auto;
+    }
+}
+
+>>>>>>> d799c86827e0215ea2d1a05101727ebcac07c9be
 @media (pointer:coarse) {
     .btn-card-left, .btn-card-right {
         display: none;
@@ -612,7 +623,7 @@ label {
 
 @media (max-width: 920px) {
     .slider {
-        padding: 40px 0px 40px 0px;
+        padding: 110px 0px 70px 0px;
     }
 }
 
@@ -752,7 +763,7 @@ label {
 @media (max-width: 920px) {
     .btn-card-left,
     .btn-card-right {
-        top: 35%;
+        top: 51%;
     }
 }
 
@@ -881,7 +892,7 @@ label {
 
     .process-section-right>.process-section-cards>.process-section-card:nth-child(1) {
         position: relative;
-        top: 0;
+        top: -380;
         margin-right: 0;
         z-index: 2;
     }
@@ -1056,6 +1067,7 @@ label {
 .reason-2>img,
 .reason-3>img {
     width: 20%;
+    height: 70px;
     margin-bottom: 20px;
 }
 
