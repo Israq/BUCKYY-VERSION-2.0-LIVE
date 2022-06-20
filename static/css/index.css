@@ -595,15 +595,12 @@ label {
     overflow-x: scroll;
 }
 
-<<<<<<< HEAD
-=======
 @media (max-width: 920px) {
     .slider {
         height: auto;
     }
 }
 
->>>>>>> d799c86827e0215ea2d1a05101727ebcac07c9be
 @media (pointer:coarse) {
     .btn-card-left, .btn-card-right {
         display: none;
