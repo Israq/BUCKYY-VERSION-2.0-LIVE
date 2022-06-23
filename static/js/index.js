@@ -619,7 +619,7 @@ function showEkycPage(move) {
         }
     }
     else if (currentLabel == "Email") {
-        var re = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$");
+        var re = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,3}$");
         email = document.getElementById("ekyc-input").value;
         document.getElementById("ekyc-input").value = "";
 
@@ -628,7 +628,7 @@ function showEkycPage(move) {
             return;
         }
         else {
-            if(re.test(email)) {
+            if(re.test(email) || move == 'previous') {
             }
             else {
                 alert[1].style.setProperty('opacity', '1', 'important');
