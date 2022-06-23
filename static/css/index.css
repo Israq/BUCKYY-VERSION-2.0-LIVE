@@ -703,7 +703,7 @@ label {
 
 @media (min-width: 769px) {
     .slider>.slider-card {
-        left: 350px;
+        left: 20px;
     }
 }
 
