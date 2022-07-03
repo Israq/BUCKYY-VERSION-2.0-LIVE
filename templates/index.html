@@ -372,7 +372,7 @@
             <h3>Sign in</h3>
             <p>Sign in to your account with your phone number</p>
             <form action="#" method="">
-                <input type="number" id="phone-number-input" placeholder="Phone number" required>
+                <input type="tel" id="phone-number-input" placeholder="Phone number" required>
                 <input type="password" placeholder="Password" required>
                 <p id="forgotten-password-para">Forgotten password?</p>
                 <button type="submit">Continue</button>
@@ -392,7 +392,7 @@
             <p>Tell us a bit about yourself. We just need the basics.</p>
             <form action="#" method="post">
                 {% csrf_token %}
-                <input type="number" name="phone" placeholder="Phone number" required>
+                <input type="tel" name="phone" placeholder="Phone number" required>
                 <button type="submit">Continue</button>
             </form>
             <p>We’ll send you a verification code via SMS.</p>

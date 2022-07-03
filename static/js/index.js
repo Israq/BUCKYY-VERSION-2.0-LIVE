@@ -492,11 +492,16 @@ function arrowRotation(btnNo) {
 
 }
 
+//Close alert in 
+
+function closeAlertPopup() {
+    document.getElementsByClassName("alert")[0].style.opacity = "0";
+    document.getElementsByClassName("alert")[1].style.opacity = "0";
+}
+
 //Close log in 
 
 function closePopup() {
-    document.getElementsByClassName("alert")[0].style.opacity = "0";
-    document.getElementsByClassName("alert")[1].style.opacity = "0";
     document.getElementsByClassName("sign-in-popup")[0].style.display = "none";
     document.getElementsByClassName("create-account-popup")[0].style.display = "none";
     document.getElementsByClassName("otp-popup")[0].style.display = "none";
