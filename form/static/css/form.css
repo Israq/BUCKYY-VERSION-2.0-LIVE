@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+/* Log in pop up */
+
+a:hover {
+    text-decoration: none !important;
+}
+
+nav {
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px #d3d3d3;
+}
+
+nav > img {
+    width: 100px;
+    max-width: 30px;
+    padding: 5px 0px 5px 0px;
+}
+
+#left-arrow-img {
+    width: 100%;
+    max-width: 20px;
+    position: absolute;
+    left: 30;
+}
+
+form {
+    margin: 0;
+}
+
+.sign-in-popup,
+.create-account-popup,
+.otp-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up {
+    position: relative;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 35px;
+    margin: 15px;
+    border-radius: 10px;
+    border: 0px 0px 5px #000;
+}
+
+@media (max-width: 576px) {
+    .pop-up {
+        padding: 25px;
+    }
+}
+
+.pop-up img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.pop-up h3 {
+    color: #353535;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .pop-up h3 {
+        font-size: 30px;
+    }
+}
+
+.pop-up p {
+    color: #353535;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#forgotten-password-para {
+    color: #28CCAC;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 576px) {
+    #forgotten-password-para {
+        margin-bottom: 12px;
+    }
+}
+
+.pop-up button {
+    width: 100%;
+    padding: 15px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #28CCAC;
+    border: 0px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 576px) {
+    .pop-up button {
+        margin-bottom: 12px;
+    }
+}
+
+.pop-up a {
+    color: #28CCAC !important;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.terms-of-service-para {
+    font-size: 14px !important;
+    margin-top: 25px;
+}
+
+@media (max-width: 576px) {
+    .terms-of-service-para {
+        margin-top: 12px;
+    }
+}
+
+#terms-of-service {
+    color: #28CCAC;
+}
+
+.pop-up input {
+    width: 100%;
+    color: #a0adad;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #a0adad;
+    margin-top: 25px;
+}
+
+@media (max-width: 576px) {
+    #phone-number-input {
+        margin-top: 0px;
+    }
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    padding: 8px 0px 0px 0px;
+    font-size: 18px;
+    color: #a0adad;
+    font-weight: bold;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer */
+    padding: 8px 0px 0px 0px;
+    font-size: 18px;
+    color: #a0adad;
+    font-weight: bold;
+}
+
+::placeholder {
+    font-size: 18px;
+    color: #a0adad;
+    font-weight: bold;
+}
+
+/* end */
+
+
+
+/*Create account popup*/
+
+
+.create-account-popup {
+    display: none;
+}
+
+
+.create-account-popup>.pop-up>form>input {
+    color: #a0adad;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+/*end*/
+
+/*OTP popup*/
+
+.otp-popup {
+    display: none;
+}
+
+.otp-popup>.pop-up input {
+    width: 15%;
+    color: #a0adad;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #a0adad;
+    margin-top: 25px;
+}
+
+.otp-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.otp-popup .pop-up p:nth-child(6) {
+    color: #000;
+}
+
+/*end*/

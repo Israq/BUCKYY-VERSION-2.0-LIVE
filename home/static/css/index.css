@@ -137,6 +137,10 @@ a:hover {
     background-image: url(../images/menu.png) !important;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
 .nav-item {
     padding-left: 25px;
     color: #fff !important;

@@ -46,8 +46,7 @@ INSTALLED_APPS = [
     'geeks',
     'phone',
     'books',
-    
-    
+    'form',   
 ]
 
 MIDDLEWARE = [
