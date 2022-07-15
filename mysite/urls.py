@@ -31,6 +31,7 @@ urlpatterns = [
     path('', include('phone.urls')),
     path('', include('contact.urls')),
     path('', include('geeks.urls')),
+    path('form/', include('form.urls')),
     
 ]
 
