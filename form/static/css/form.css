@@ -4,6 +4,10 @@
     font-family: 'DM Sans', sans-serif;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #28CCAC !important;
+}
 /* Log in pop up */
 
 a:hover {
@@ -15,6 +19,7 @@ nav {
     display: flex !important;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
     box-shadow: 1px 1px 10px #d3d3d3;
 }
 
@@ -41,6 +46,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #28CCAC;
 }
 
 .pop-up {
